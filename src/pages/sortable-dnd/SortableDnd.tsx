@@ -46,9 +46,9 @@ export default function SortableDnd() {
                   setItems((currentItems) => {
                     const updatedItems = currentItems.slice();
                     updatedItems.splice(
-                      targetIndex()!,
+                      index,
                       0,
-                      ...updatedItems.splice(index, 1)
+                      ...updatedItems.splice(targetIndex()!, 1)
                     );
                     return updatedItems;
                   });
